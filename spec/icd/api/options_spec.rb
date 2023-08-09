@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'icd/api/authorizer'
-
 RSpec.describe Icd::Api::Options do
   subject { described_class.new }
 

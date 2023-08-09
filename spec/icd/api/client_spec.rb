@@ -2,8 +2,9 @@
 
 require 'spec_helper'
 RSpec.describe Icd::Api::Client do
-  let(:client) { described_class.new(client_id: '',
-                                     client_secret: '') }
+  let(:client) do
+    described_class.new
+  end
 
   context 'Fetch by Code -- Good Value' do
     let(:response) do

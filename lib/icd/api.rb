@@ -1,8 +1,16 @@
 # frozen_string_literal: true
 
+require 'zeitwerk'
+require 'dry-configurable'
+require 'faraday'
 require 'icd/api/version'
 
-require 'icd/api/client'
+LOADER = Zeitwerk::Loader.new
+%w[lib].each do |require_path|
+  LOADER.push_dir(require_path)
+end
+
+LOADER.setup
 
 module Icd
   module Api
