@@ -3,7 +3,6 @@
 require 'bundler/setup'
 require 'icd/api'
 require 'vcr'
-require 'byebug'
 
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/vcr'
