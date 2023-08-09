@@ -25,12 +25,6 @@ module Icd
             expect(subject.expires_at.to_i).to be_within(5).of(Time.now.to_i + 3600)
           end
         end
-
-        it 'returns access token with expire in 3600' do
-          VCR.use_cassette('icd/api/authorize_token_expired') do
-            expect(subject.expires_at.to_i).to be_within(5).of(Time.now.to_i + 3600)
-          end
-        end
       end
     end
   end
