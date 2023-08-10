@@ -8,8 +8,8 @@ module Icd
       SCOPE = 'icdapi_access'
       GRANT_TYPE = 'client_credentials'
 
-      setting :client_id
-      setting :client_secret
+      setting :client_id, default: ENV['ICD_API_CLIENT_ID']
+      setting :client_secret, default: ENV['ICD_API_CLIENT_SECRET']
 
       class << self
         def call
