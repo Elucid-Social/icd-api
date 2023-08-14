@@ -3,7 +3,6 @@
 require 'zeitwerk'
 require 'dry-configurable'
 require 'faraday'
-require 'icd/api/version'
 
 module Icd
   module Api
