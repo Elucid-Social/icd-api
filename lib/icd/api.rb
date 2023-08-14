@@ -6,9 +6,9 @@ require 'faraday'
 require 'icd/api/version'
 
 loader = Zeitwerk::Loader.new
-%w[lib].each do |require_path|
-  loader.push_dir(require_path)
-end
+root = File.expand_path('..', __dir__)
+
+loader.push_dir(root)
 
 loader.setup
 
